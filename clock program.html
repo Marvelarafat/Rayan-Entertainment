@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+ <html> 
+<head>
+<title>
+Current Time
+</title>
+<style>
+div {
+padding: 100px;
+-webkit-border-radius: 30px;
+line-height: 200px;
+background-image: url("/mnt/sdcard/Arafat programs/woow.jpeg");
+text-align: center;
+font-size: 100px;
+font-weght: bold;
+text-shadow: 3px 4px black;
+color: gold;
+margin-top: 160px;
+-webkit-transition: 4s ease-out;
+}
+div:hover {
+-webkit-transform: rotateX(80deg) rotateY(60deg) rotateZ(20deg);
+}
+h2 {
+padding: 40px;
+background-color: silver;
+font-size: 50px;
+text-shadow: 3px 4px black;
+color: gold;
+text-align: center;
+}
+body {
+background-color: black;
+}
+}
+</style>
+ <body> 
+<h2> <b id="will">My Clock Program</b></h2>
+<button type="button"
+onclick="document.getElementById('will').innerHTML =Date()">
+Click me to display Date </button>
+<p style="font-size: 30px; color: gold;">
+If it just displays <b>My clock</b> it means that your browser doesn't support JavaScript. Please update your browser or enable JavaScript.
+</p>
+<p style="font-size: 30px; color: red;">
+Tap on the Clock Below to see transition 😂😂
+</p>
+<div id="pin">My Clock</div>
+<script> 
+ function printTime() {
+var d = new Date();
+var hours =
+d.getHours();
+var mins =
+d.getMinutes();
+var secs =
+d.getSeconds();
+  document.getElementById("pin").innerHTML =
+hours+":"+mins+":"+secs;
+}
+setInterval(printTime, 
+1000);
+ </script> 
+ </body> 
+ </html>
