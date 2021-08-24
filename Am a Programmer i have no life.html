@@ -10,6 +10,15 @@ background-image: url("https://marvelarafat.github.me/gemini.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
+ h2 {
+font-family: 'Abhaya Libre', serif;
+font-size: 30px;
+color: red;
+}
+p {
+font-size: 20px;
+color: blue;
+}
 </style>
 </head>
 <body>
@@ -49,6 +58,60 @@ You can email me at marvelarafat@gmail.com
 Find Marvel Arafat Gemini on <br/>
 <a href="">Facebook</a> <a href="">Instagram</<a href="">Youtube</a>
 </p>
+<!-- STARTING MAIN CONTENT -->
+<h1 style="font-size: 30px; color: blue; font-family: 'Fredericka the Great', cursive;">Leave a comment</h1>
+<div>						
+<input id="userName" type="text" name="username" placeholder="username" class="bg-light w-50"><br/>
+<textarea id="myComment" placeholder="comment"></textarea><br/>
+<button onclick="submitMyComment()">comment</button>
+</div>
+        <!-- ENDING MAIN CONTENT -->
+
+        <!-- STARTING OUTPUT SECTION -->
+
+ <section>
+  <div class="container-fluid">
+  <div class="row" id="divParent">
+                            <!-- comment -->
+  </div>    
+ </div>
+ </section>
+
+        <!-- ENDING OUTPUT SECTION -->
+
+ <script>
+            var counter = 0;
+
+            function submitMyComment() {
+
+                var userName = document.getElementById("userName");
+
+                var myComment = document.getElementById("myComment");
+
+                var parentDiv = document.getElementById("divParent");
+
+                var date = new Date();
+				
+                var newComment = document.createElement("div");
+				
+                    newComment.classList.add("col-10", "mx-auto");
+
+                    newComment.innerHTML = "<h2>" + userName.value + "</h2>";
+
+                    newComment.innerHTML += "<p>" + myComment.value + "</p>";
+
+                    newComment.innerHTML += "<span class='smalldate'>" + date + "</span>";
+
+                   parentDiv.appendChild(newComment);
+
+                   counter++;
+
+                   userName.value="";
+
+                myComment.value="";
+
+                }
+</script>
 <div style="font-size: 22px; color: black;">
 <marquee>Am a Programmer i have No Life</marguee>
 </div>
